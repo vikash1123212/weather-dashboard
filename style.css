@@ -1,8 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #e0f7fa;
-  padding: 40px;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #fff);
+  padding: 40px 20px;
   text-align: center;
+  min-height: 100vh;
 }
 
 .container {
@@ -10,15 +17,22 @@ body {
   margin: auto;
   background: white;
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.01);
 }
 
 input {
   padding: 10px;
   width: 70%;
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 button {
@@ -27,8 +41,9 @@ button {
   background: #007BFF;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 button:hover {
@@ -39,5 +54,44 @@ button:hover {
   margin-top: 20px;
   background: #f1f8e9;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-size: 16px;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 14px;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+    width: 90%;
+  }
+
+  input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .weather-card {
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
 }
